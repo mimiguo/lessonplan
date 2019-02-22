@@ -12,6 +12,11 @@ const routes: Routes = [
   {
     path: 'sale-record',
     component: SaleRecordComponent
+  },
+  {
+    path: '',
+    redirectTo: '/daily-report',
+    pathMatch: 'full'
   }
 ];
 
