@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyReportComponent implements OnInit {
 
-  constructor() { }
+  floorArray = [
+    {
+      name: '1F',
+      status: '滿'
+    },
+    {
+      name: '2F',
+      status: 14
+    },
+    {
+      name: '室外',
+      status: 8
+    },
+    {
+      name: '室外a',
+      status: 8
+    }
+
+  ];
+  constructor() {
+
+    console.log(this.floorArray);
+   }
 
   ngOnInit() {
   }
 
 }
+
