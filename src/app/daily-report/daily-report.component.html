@@ -4,7 +4,7 @@
     <li>2F</li>
     <li>室外</li>
     <li>室外</li> -->
-    <li *ngFor="let item of floorArray;let i=index" (click)='onClick($event)'>{{item.name}}</li>
+    <li *ngFor="let item of floorArray;let i=index" [class.active]="selected[i]" (click)="onClick(i)">{{item.name}}</li>
   </ul>
   <hr>
   <ul class="menu">

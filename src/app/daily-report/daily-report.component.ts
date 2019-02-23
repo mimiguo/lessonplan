@@ -59,17 +59,13 @@ export class DailyReportComponent implements OnInit {
     console.log('selected', this.selected);
   }
 
-  onClick(event) {
-    console.log(event.target);
-    let lis = document.querySelectorAll('.floor li');
-    lis.forEach((item) => {
+  onClick(index) {
+    console.log(index);
+    this.selected.forEach((item, index) => {
       console.log(item);
-      console.log('this', this);
-      item.className = "";
+      this.selected[index] = false;
     });
-    console.log('lis', lis);
-    event.target.className = "active";
-
+    this.selected[index] = true;
   }
 }
 
