@@ -1,4 +1,10 @@
+:host {
+  display: flex;
+
+}
+
 aside {
+
   width: 99px;
   height: 768px;
   outline: 1px solid pink;
@@ -28,12 +34,54 @@ aside {
 
 .menu {
   height: 310+px;
+  padding: 22px 0 0 0;
   font-size: 16px;
   letter-spacing: 2px;
+
+  li {
+    height: 56px;
+    margin: 0 0 48px 0;
+    outline: 1px solid pink;
+
+    i {
+      display: inline-block;
+      width: 30px;
+      height: 29px;
+      margin: 0 0 10px 0;
+      outline: 1px solid red;
+    }
+
+  }
 }
 
 .power-btn {
   width: 99px;
   height: 47px;
   background: #f24141;
+}
+
+main {
+  width: 925px;
+
+}
+
+.breadcrumb {
+  height: 39px;
+  line-height: 39px;
+  text-align: right;
+  background: #262626;
+
+  i {
+    margin: 0 45px;
+    color: #e23f3f;
+  }
+
+  span {
+    color: #b2b2b2;
+
+    &:nth-last-child(1) {
+      color: #fff;
+      margin: 0 64px 0 0;
+    }
+  }
 }
