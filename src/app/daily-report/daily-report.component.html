@@ -1,10 +1,10 @@
 <aside>
-  <ul  class="floor" >
+  <ul class="floor">
     <!-- <li>1F</li>
     <li>2F</li>
     <li>室外</li>
     <li>室外</li> -->
-    <li *ngFor="let item of floorArray">{{item.name}}</li>
+    <li *ngFor="let item of floorArray;let i=index" (click)='onClick($event)'>{{item.name}}</li>
   </ul>
   <hr>
   <ul class="menu">
@@ -18,5 +18,5 @@
       <p>設定</p>
     </li>
   </ul>
-  <button  class="power-btn"> </button>
+  <button class="power-btn"> </button>
 </aside>
