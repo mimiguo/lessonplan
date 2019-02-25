@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import './css/reset.css';
+@import './css/animation.css';
+@import './css/fontello.css';
+@import './css/fontello-codes.css';
+@import './css/fontello-embedded.css';
+
+input[type=text],
+input[type=date] {
+  width: 321px;
+  height: 50px;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  color: #676d77;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+
+}

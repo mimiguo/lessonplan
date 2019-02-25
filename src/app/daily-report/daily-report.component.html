@@ -1,0 +1,52 @@
+<aside>
+  <ul class="floor">
+    <!-- <li>1F</li>
+    <li>2F</li>
+    <li>室外</li>
+    <li>室外</li> -->
+    <li *ngFor="let item of floorArray;let i=index" [class.active]="selected[i]" (click)="onClick(i)">{{item.name}}</li>
+  </ul>
+  <hr>
+  <ul class="menu">
+    <li>
+      <i class="icon-calc"></i>
+      <p>收銀作業</p>
+    </li>
+    <li>
+      <i class="icon-doc-text"></i>
+      <p>會計作業</p>
+    </li>
+    <li>
+      <i class="icon-align-justify"></i>
+      <p>設定</p>
+    </li>
+  </ul>
+  <button class="power-btn"> <i class="icon-off"></i></button>
+</aside>
+<main>
+  <p class="breadcrumb">
+    <span>日結</span>
+    <i class="icon-down-open"></i>
+    <span>營業日報表</span>
+  </p>
+
+  <nav class="nav">
+    <a class="active">營業日報表</a>
+    <a>銷售紀錄</a>
+    <a>刪單紀錄</a>
+    <img src="" alt="">
+  </nav>
+  <div>
+    <form action="">
+      <ul>
+        <li><label for="date">搜尋時間</label><input type="date" id="date"></li>
+        <li><label for="">銷售額</label><input type="text" value="100">元</li>
+        <li><label for="">桌數</label><input type="text">桌</li>
+        <li><label for="">其他收入</label><input type="text">元</li>
+        <li><label for="">其他支出</label><input type="text">元</li>
+        <li><label for="">營收淨額</label><input type="text">元</li>
+        <li><label for="">刪單金額</label><input type="text">元</li>
+      </ul>
+    </form>
+  </div>
+</main>

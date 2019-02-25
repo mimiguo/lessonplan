@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DailyReportComponent } from './daily-report/daily-report.component';
+import { SaleRecordComponent } from './sale-record/sale-record.component';
+import { from } from 'rxjs';
+const routes: Routes = [
+  {
+    path: 'daily-report',
+    component: DailyReportComponent
+  },
 
-const routes: Routes = [];
+  {
+    path: 'sale-record',
+    component: SaleRecordComponent
+  },
+  {
+    path: '',
+    redirectTo: '/daily-report',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

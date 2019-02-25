@@ -1,0 +1,39 @@
+aside {
+  width: 99px;
+  height: 768px;
+  outline: 1px solid pink;
+  background: #262626;
+  color: #ffffff;
+  text-align: center;
+}
+
+.floor {
+  height: 409px;
+  padding: 34px 0;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.floor li {
+  height: 60px;
+  line-height: 60px;
+  margin: 0 0 34px 0;
+  outline: 1px solid pink;
+}
+
+.menu {
+  height: 310px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.power-btn {
+  width: 99px;
+  height: 47px;
+  background: #f24141;
+}
+
+a[href="xxx"] {
+  color: red;
+}
+/*# sourceMappingURL=daily-report.component.css.map */
