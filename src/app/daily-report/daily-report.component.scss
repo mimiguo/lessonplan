@@ -67,6 +67,7 @@ aside {
 
 main {
   width: 925px;
+  width: calc(100vw - 99px);
 
 }
 
@@ -78,8 +79,8 @@ main {
 
   i {
     margin: 0 45px;
-    position:relative;
-    top:2px;
+    position: relative;
+    top: 2px;
     color: #e23f3f;
 
     &::before {
@@ -98,25 +99,76 @@ main {
 }
 
 .nav {
-  width: 925px;
   height: 72px;
   padding: 14px 28px;
-  line-height: 17px;
-  outline: 1px solid pink;
+  box-shadow: 0 0 13px #aeaeae;
+  // line-height: 45px;
+  // outline: 1px solid pink;
 
   a {
+    display: inline-block;
     width: 120px;
     height: 45px;
-    margin: 0 21px;
-    display: inline-block;
-    text-decoration: none;
+    text-align: center;
     font-size: 14px;
+    margin: 0 21px;
+    padding: 15px 10px 0 0;
+    text-decoration: none;
+    border: 2px solid #d8d8d8;
+    border-radius: 5px;
     color: #f5933f;
-    outline: 1px solid pink;
+    // outline: 1px solid pink;
 
     &:nth-child(1) {
       width: 135px;
     }
+
+    &.active {
+      color: #f24141;
+    }
   }
 
+}
+
+
+form {
+  width: 550px;
+  height: calc(100vh - 72px - 39px);
+  padding: 35px 29px;
+  margin: 0 auto;
+  border-left: 1px solid #aeaeae;
+  border-right: 1px solid #aeaeae;
+
+  ul {
+    label {
+      width: 104px;
+      height: 25px;
+      display: inline-block;
+      text-align: justify;
+      overflow: hidden;
+
+      // outline: 1px solid red;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 35px 0;
+      font-size: 24px;
+      letter-spacing: 2px;
+      color: #262626;
+      // outline: 1px solid pink;
+    }
+  }
+}
+
+#date {
+  margin: 0 45px 0 0;
 }
