@@ -183,6 +183,26 @@ main {
       letter-spacing: 1px;
       color: #676d77;
     }
+    .display-table {
+        width: 437px;
+        max-height: 440px;
+        margin: 13px 13px 13px 13px;
+        overflow: scroll;
+        line-height: 25px;
+        border: 1px solid #d2d2d2;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #6b6b6b;
+  
+        td{
+          height: 45px;
+          line-height: 45px;
+          border-bottom: 2px solid #d6d6d6;
+        }
+  
+      }
   }
 
   .box-right {
@@ -216,12 +236,11 @@ main {
       }
     }
 
-    table {
+    .order-table {
       width: 437px;
       height: 156px;
       padding: 10px 13px;
       margin: 13px 13px 13px 13px;
-      overflow: scroll;
       border: 1px solid #d2d2d2;
       border-radius: 10px;
       font-size: 16px;
@@ -245,5 +264,46 @@ main {
       }
     }
 
+    .display-table {
+      width: 437px;
+      max-height: 418px;
+      padding: 10px 0;
+      margin: 13px 13px 13px 13px;
+      overflow: scroll;
+      line-height: 25px;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #262626;
+
+      th {
+        text-align: left;
+        border-bottom: 2px solid #d6d6d6;
+
+        &:nth-child(2) {
+          text-align: center;
+          width: 70px;
+        }
+      }
+
+      td {
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 2px solid #d6d6d6;
+
+        &:nth-child(1) {
+          width: 235px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        &:nth-child(2) {
+          text-align: center;
+        }
+      }
+
+    }
   }
 }
