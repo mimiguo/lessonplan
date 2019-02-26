@@ -1,3 +1,42 @@
-<p>
-  sale-record works!
-</p>
+<aside>
+  <ul class="floor">
+    <li>1F</li>
+    <li>2F</li>
+    <li>室外</li>
+    <li>室外</li>
+    <!-- <li *ngFor="let item of floorArray;let i=index" [class.active]="selected[i]" (click)="onClick(i)">{{item.name}}</li> -->
+  </ul>
+  <hr>
+  <ul class="menu">
+    <li>
+      <i class="icon-calc"></i>
+      <p>收銀作業</p>
+    </li>
+    <li>
+      <i class="icon-doc-text"></i>
+      <p>會計作業</p>
+    </li>
+    <li>
+      <i class="icon-align-justify"></i>
+      <p>設定</p>
+    </li>
+  </ul>
+  <button class="power-btn"> <i class="icon-off"></i></button>
+</aside>
+<main>
+  <p class="breadcrumb">
+    <span>使用者名稱</span>
+    <span>日結</span>
+    <i>></i>
+    <span>銷售紀錄</span>
+  </p>
+  <nav>
+    <a>營業日報表</a>
+    <a>銷售紀錄</a>
+    <a>刪單紀錄</a>
+  </nav>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+</main>

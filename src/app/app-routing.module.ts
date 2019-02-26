@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/daily-report',
+    redirectTo: 'sale-record',
     pathMatch: 'full'
   }
 ];
