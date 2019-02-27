@@ -40,22 +40,25 @@
       <p>
         <span>搜尋時間</span>
       </p>
-      <div>
+      <div class="date-box">
         <input type="date">
         <input type="date">
       </div>
       <button>查詢結果有<span>20</span>筆記錄</button>
       <p class="title">門市收支列表</p>
-      <table class="display-table">
-        <tr *ngFor="let item of listArray;">
-          <td>{{item.number}}</td>
-          <td>{{item.day}}</td>
-          <td>{{item.time}}</td>
-        </tr>
-      </table>
+      <div class="scroll-div">
+
+        <table class="display-table">
+          <tr *ngFor="let item of listArray;">
+            <td>{{item.number}}</td>
+            <td>{{item.day}}</td>
+            <td>{{item.time}}</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="box-right">
-      <div>
+      <div class="navbar">
         <p>詳細資訊</p>
         <p class="red-btn">另開編輯</p>
         <p class="orange-btn">退單</p>
@@ -87,18 +90,21 @@
           <td>編輯過</td>
         </tr>
       </table>
-      <table class="display-table">
-        <tr>
-          <th>商品名稱</th>
-          <th>數量</th>
-          <th>價格</th>
-        </tr>
-        <tr *ngFor="let item of totalArray;">
-         <td>{{item.name}}</td>
-         <td>{{item.quantity}}</td>
-         <td>{{item.price}}</td>
-        </tr>
-      </table>
+      <div class="scroll-div">
+
+        <table class="display-table">
+          <tr>
+            <th>商品名稱</th>
+            <th>數量</th>
+            <th>價格</th>
+          </tr>
+          <tr *ngFor="let item of totalArray;">
+            <td>{{item.name}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </main>
