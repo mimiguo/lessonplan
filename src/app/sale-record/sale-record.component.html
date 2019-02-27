@@ -40,29 +40,41 @@
       <p>
         <span>搜尋時間</span>
       </p>
+
       <div class="date-box">
         <input type="date">
         <input type="date">
+        <p>查詢結果有<span>20</span>筆記錄</p>
       </div>
-      <button>查詢結果有<span>20</span>筆記錄</button>
+
       <p class="title">門市收支列表</p>
       <div class="scroll-div">
 
         <table class="display-table">
-          <tr *ngFor="let item of listArray;">
-            <td>{{item.number}}</td>
+          <tr *ngFor="let item of listArray;let i =index">
+            <td>{{i+1}}.</td>
             <td>{{item.day}}</td>
             <td>{{item.time}}</td>
           </tr>
         </table>
       </div>
     </div>
+
     <div class="box-right">
       <div class="navbar">
         <p>詳細資訊</p>
-        <p class="red-btn">另開編輯</p>
-        <p class="orange-btn">退單</p>
+        <button class="red-btn">另開編輯</button>
+        <button class="orange-btn">退單</button>
       </div>
+
+      <!-- <ul>
+        <li><span>修改人</span>:王小明</li>
+        <li>桌號:外帶</li>
+        <li>價格:NT6539</li>
+        <li>時間:2016-12-01-12:30</li>
+        <li>狀態:編輯過</li>
+      </ul> -->
+
       <table class="order-table">
         <tr>
           <td>修改人</td>

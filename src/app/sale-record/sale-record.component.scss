@@ -5,7 +5,7 @@
 aside {
 
   width: 99px;
-  height: 768px;
+  height: 100vh;
   background: #262626;
   color: #ffffff;
   text-align: center;
@@ -14,7 +14,8 @@ aside {
 }
 
 .floor {
-  height: 409px;
+  // height: 409px;
+  height: calc(100vh - 360px);
   padding: 34px 0;
   overflow: scroll;
   font-size: 30px;
@@ -59,7 +60,7 @@ aside {
 
 .power-btn {
   width: 99px;
-  height: 47px;
+  height: 48px;
   font-size: 23px;
   color: #fff;
   background: #f24141;
@@ -107,9 +108,9 @@ main {
     margin: 0 21px;
     padding: 12px 5px 0 0;
     text-decoration: none;
+    color: #f5933f;
     border: 2px solid #f5933f;
     border-radius: 5px;
-    color: #f5933f;
     // outline: 1px solid pink;
 
     &:nth-child(1) {
@@ -124,13 +125,14 @@ main {
 }
 
 .content {
-  height: 768px - 39px - 72px;
   display: flex;
+  height: calc(100vh - 39px - 72px);
   //   outline: 1px solid pink;
 
   .box-left {
-    width: 463px;
+    width: calc((100vw - 99px)/2);
     border-right: 1px solid #d2d2d2;
+    text-align: center;
 
     p:nth-child(1) {
       padding: 9px 27px;
@@ -146,38 +148,45 @@ main {
     }
 
     .date-box {
-      display: flex;
+      display: inline-block;
       width: 437px;
-      height: 63px;
+      height: 102px;
       padding: 17px 0 0 0;
-      margin: 13px 14px 0 14px;
+      margin: 13px 0;
+      text-align: center;
       border: 1px solid #aeaeae;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-radius: 10px;
 
       input {
+        display: inline;
         width: 202px;
         height: 32px;
-        margin: 0 10px;
+        margin: 0 5px;
       }
-    }
 
-    button {
-      width: 437px;
-      height: 36px;
-      margin: 0 14px 17px 14px;
-      border: 1px solid #aeaeae;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      background: -webkit-linear-gradient(90deg, #EAEAEA 0, #FFFFFF 100%);
+      p {
+        width: 435px;
+        height: 36px;
+        margin: 19px auto;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: #70757f;
+        border-top: 1px solid #aeaeae;
+        border-bottom: 1px solid #aeaeae;
+        border-radius: 0 0 10px 10px;
+        background: linear-gradient(0deg, #EAEAEA -50%, #FFFFFF 80%);
 
-      span {
-        color: #f24141;
+        span {
+          color: #f24141;
+        }
       }
     }
 
     .title {
-      margin: 0 17px;
+      width: 437px;
+      margin: 0 auto;
+      text-align: left;
       font-size: 14px;
       line-height: 17px;
       letter-spacing: 1px;
@@ -192,15 +201,15 @@ main {
     .display-table {
       width: 437px;
       max-height: 440px;
-      margin: 13px 13px 13px 13px;
+      margin: 13px auto 13px;
       overflow: scroll;
-      line-height: 25px;
-      border: 1px solid #d2d2d2;
-      border-radius: 10px;
-      font-size: 20px;
       text-align: center;
+      line-height: 25px;
+      font-size: 20px;
       letter-spacing: 0px;
       color: #6b6b6b;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
 
       td {
         height: 45px;
@@ -212,9 +221,10 @@ main {
   }
 
   .box-right {
-    width: 461px;
+    width: calc((100vw - 99px)/2);
 
     .navbar {
+      position: relative;
       display: flex;
       height: 35px;
       box-shadow: 0px 3px 4px #aeaeae;
@@ -223,20 +233,26 @@ main {
       p {
         width: 200px;
         padding: 10px;
-        text-align: center;
+        // text-align: center;
         // outline: 1px solid pink;
 
 
       }
 
       .orange-btn {
+        position: absolute;
+        right: 0;
         width: 130px;
+        height: 35px;
         background: #f5933f;
         color: #fff;
       }
 
       .red-btn {
+        position: absolute;
+        right: 130px;
         width: 130px;
+        height: 35px;
         background: #f24141;
         color: #fff;
       }
@@ -246,11 +262,11 @@ main {
       width: 437px;
       height: 156px;
       padding: 10px 13px;
-      margin: 13px 13px 13px 13px;
-      border: 1px solid #d2d2d2;
-      border-radius: 10px;
+      margin: 13px auto 13px;
       font-size: 16px;
       color: #3a3a3a;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
 
       td:nth-child(1) {
         width: 80px;
@@ -279,14 +295,14 @@ main {
       width: 437px;
       max-height: 418px;
       padding: 10px 0;
-      margin: 13px 13px 13px 13px;
+      margin: 13px auto 13px;
       overflow: scroll;
       line-height: 25px;
-      border: 1px solid #d2d2d2;
-      border-radius: 10px;
       font-size: 13px;
       letter-spacing: 1px;
       color: #262626;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
 
       th {
         text-align: left;
