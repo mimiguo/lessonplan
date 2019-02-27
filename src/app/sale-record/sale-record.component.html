@@ -51,7 +51,7 @@
       <div class="scroll-div">
 
         <table class="display-table">
-          <tr *ngFor="let item of listArray;let i =index">
+          <tr *ngFor="let item of time;let i =index">
             <td>{{i+1}}.</td>
             <td>{{item.day}}</td>
             <td>{{item.time}}</td>
@@ -61,60 +61,37 @@
     </div>
 
     <div class="box-right">
-      <div class="navbar">
+      <div class="toolbar">
         <p>詳細資訊</p>
-        <button class="red-btn">另開編輯</button>
-        <button class="orange-btn">退單</button>
+        <button class="new-page">另開編輯</button>
+        <button class="concel">退單</button>
       </div>
 
-      <!-- <ul>
-        <li><span>修改人</span>:王小明</li>
-        <li>桌號:外帶</li>
-        <li>價格:NT6539</li>
-        <li>時間:2016-12-01-12:30</li>
-        <li>狀態:編輯過</li>
-      </ul> -->
+      <ul>
+        <li><span>修改人</span>: 王小明</li>
+        <li><span>桌號</span>: 外帶</li>
+        <li><span>價格</span>: NT6539</li>
+        <li><span>時間</span>: 2016-12-01-12:30</li>
+        <li><span>狀態</span>: 編輯過</li>
+      </ul>
 
-      <table class="order-table">
-        <tr>
-          <td>修改人</td>
-          <td>:</td>
-          <td>王小明</td>
-        </tr>
-        <tr>
-          <td>桌號</td>
-          <td>:</td>
-          <td>外帶</td>
-        </tr>
-        <tr>
-          <td>價格</td>
-          <td>:</td>
-          <td>NT6539</td>
-        </tr>
-        <tr>
-          <td>時間</td>
-          <td>:</td>
-          <td>2016-12-01-12:30</td>
-        </tr>
-        <tr>
-          <td>狀態</td>
-          <td>:</td>
-          <td>編輯過</td>
-        </tr>
-      </table>
+
       <div class="scroll-div">
-
         <table class="display-table">
-          <tr>
-            <th>商品名稱</th>
-            <th>數量</th>
-            <th>價格</th>
-          </tr>
-          <tr *ngFor="let item of totalArray;">
-            <td>{{item.name}}</td>
-            <td>{{item.quantity}}</td>
-            <td>{{item.price}}</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>數量</th>
+              <th>價格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of production;">
+              <td>{{item.name}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.price}}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

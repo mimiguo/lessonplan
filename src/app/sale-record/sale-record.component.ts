@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Time } from '@angular/common';
 
-
-interface OrderList {
+interface SearchTime {
   day: string,
   time: any
 }
 
-interface OrderTotal {
+interface detailProduction {
   name: string,
   quantity: number,
   price: number
@@ -19,12 +18,12 @@ interface OrderTotal {
 })
 export class SaleRecordComponent implements OnInit {
 
-  listArray: Array<OrderList> = [];
-  totalArray: Array<OrderTotal> = [];
+  time: Array<SearchTime> = [];
+  production: Array<detailProduction> = [];
   constructor() { }
 
   ngOnInit() {
-    this.listArray = [
+    this.time = [
       {
         day: '2016-12-01',
         time: '11:30:03'
@@ -74,7 +73,7 @@ export class SaleRecordComponent implements OnInit {
         time: '11:30:03'
       }
     ]
-    this.totalArray = [
+    this.production = [
       {
         name: '羅勒風味海瓜子蛤蜊炒蝦仁意麵腸',
         quantity: 10,
