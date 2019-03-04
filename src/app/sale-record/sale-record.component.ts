@@ -19,7 +19,9 @@ interface detailProduction {
 export class SaleRecordComponent implements OnInit {
 
   time: Array<SearchTime> = [];
+  selected = [];
   production: Array<detailProduction> = [];
+  isActive: boolean = true;
   constructor() { }
 
   ngOnInit() {
@@ -72,7 +74,12 @@ export class SaleRecordComponent implements OnInit {
         day: '2016-12-09',
         time: '11:30:03'
       }
-    ]
+    ];
+
+    for (let i = 0; i < this.time.length; i++) {
+      this.selected[i] = false;
+    }
+
     this.production = [
       {
         name: '羅勒風味海瓜子蛤蜊炒蝦仁意麵腸',
@@ -132,4 +139,10 @@ export class SaleRecordComponent implements OnInit {
     ]
   }
 
+  onClick(index) {
+    this.selected.forEach((item, index)=>{
+      this.selected[index] = false;
+    });
+    this.selected[index] = true;
+  }
 }
