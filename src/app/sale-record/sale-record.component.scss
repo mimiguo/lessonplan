@@ -149,12 +149,10 @@ main {
     }
 
     .date-box {
-      display: inline-block;
       width: 437px;
       height: 102px;
       padding: 17px 0 0 0;
-      margin: 13px 0;
-      text-align: center;
+      margin: 13px auto;
       border: 1px solid #aeaeae;
       border-radius: 10px;
 
@@ -176,7 +174,7 @@ main {
         border-top: 1px solid #aeaeae;
         border-bottom: 1px solid #aeaeae;
         border-radius: 0 0 10px 10px;
-        background: linear-gradient(0deg, #EAEAEA -50%, #FFFFFF 80%);
+        background: linear-gradient(0deg, #EAEAEA -100%, #FFFFFF 80%);
 
         span {
           color: #f24141;
@@ -194,23 +192,25 @@ main {
       color: #676d77;
     }
 
-    .scroll-div {
-      height: 454px;
+    .scroll {
+      width: 437px;
+      height: 440px;
+      margin: 13px auto 13px;
       overflow: scroll;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
     }
 
     .display-table {
       width: 437px;
       max-height: 440px;
-      margin: 13px auto 13px;
       overflow: scroll;
       text-align: center;
       line-height: 25px;
       font-size: 20px;
       letter-spacing: 0px;
       color: #6b6b6b;
-      border: 1px solid #d2d2d2;
-      border-radius: 10px;
+      
 
       td {
         height: 45px;
@@ -259,7 +259,7 @@ main {
       }
     }
 
-    ul {
+    .detail-order {
       width: 437px;
       height: 156px;
       padding: 10px 13px;
@@ -281,58 +281,64 @@ main {
       }
     }
 
-    .scroll-div {
-      height: 418px;
-      overflow: scroll;
-    }
 
-    .display-table {
+    .detail-production {
+      // display: flex;
       width: 437px;
-      max-height: 418px;
-      padding: 10px 0;
-      margin: 13px auto 13px;
-      overflow: scroll;
-      line-height: 25px;
-      font-size: 13px;
-      letter-spacing: 1px;
-      color: #262626;
+      height: 27px;
+      padding: 5px 13px;
+      margin: 13px auto 0;
       border: 1px solid #d2d2d2;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
 
-      thead{
-        display: block;
-      }
-      tbody{
-        display: block;
-        overflow: auto;
-      }
-      th {
-        text-align: left;
-        border-bottom: 2px solid #d6d6d6;
-
-        &:nth-child(2) {
-          text-align: center;
-          width: 70px;
-        }
-      }
-
-      td {
-        height: 45px;
-        line-height: 45px;
-        border-bottom: 2px solid #d6d6d6;
+      li {
+        display: inline;
+        line-height: 5px;
+        margin: 0 35px;
 
         &:nth-child(1) {
-          width: 235px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-        }
-
-        &:nth-child(2) {
-          text-align: center;
+          text-align-last: left;
+          margin: 0 130px 0 0;
         }
       }
 
+    }
+
+    .scroll{
+      width: 437px;
+      height: 391px;
+      overflow: scroll;
+      margin: 0 auto;
+      border: 1px solid #d2d2d2;
+      border-radius: 0 0 10px 10px;
+
+      ul {
+        display: flex;
+        border-bottom: 1px solid #efefef;
+        line-height: 25px;
+        font-size: 13px;
+        letter-spacing: 1px;
+
+        li {
+          display: block;
+          width: 44px;
+          padding: 13px 0 13px 13px;
+          text-align-last: left;
+
+          &:nth-child(1) {
+            width: 235px;
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          &:nth-child(2){
+            margin: 0 55px 0 0;
+
+          }
+        }
+
+      }
     }
   }
 }

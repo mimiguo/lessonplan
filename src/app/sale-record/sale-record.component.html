@@ -48,7 +48,7 @@
       </div>
 
       <p class="title">門市收支列表</p>
-      <div class="scroll-div">
+      <div class="scroll">
 
         <table class="display-table">
           <tr *ngFor="let item of time;let i =index">
@@ -67,7 +67,7 @@
         <button class="concel">退單</button>
       </div>
 
-      <ul>
+      <ul class="detail-order">
         <li><span>修改人</span>: 王小明</li>
         <li><span>桌號</span>: 外帶</li>
         <li><span>價格</span>: NT6539</li>
@@ -75,25 +75,20 @@
         <li><span>狀態</span>: 編輯過</li>
       </ul>
 
+      <ul class="detail-production">
+        <li>商品名稱</li>
+        <li>數量</li>
+        <li>價格</li>
+      </ul>
 
-      <div class="scroll-div">
-        <table class="display-table">
-          <thead>
-            <tr>
-              <th>商品名稱</th>
-              <th>數量</th>
-              <th>價格</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of production;">
-              <td>{{item.name}}</td>
-              <td>{{item.quantity}}</td>
-              <td>{{item.price}}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="scroll">
+        <ul *ngFor="let item of production;">
+          <li>{{item.name}}</li>
+          <li> x {{item.quantity}}</li>
+          <li>NT.{{item.price}}</li>
+        </ul>
       </div>
+
     </div>
   </div>
 </main>
