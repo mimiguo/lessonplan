@@ -1,0 +1,351 @@
+:host {
+  display: flex;
+}
+
+aside {
+
+  width: 99px;
+  height: 100vh;
+  background: #262626;
+  color: #ffffff;
+  text-align: center;
+  border-right: 2px solid #8a775c;
+  box-shadow: 0px 0px 13px #aeaeae;
+}
+
+.floor {
+  // height: 409px;
+  height: calc(100vh - 360px);
+  padding: 34px 0;
+  overflow: scroll;
+  font-size: 30px;
+  letter-spacing: 3px;
+
+  li {
+    height: 60px;
+    line-height: 60px;
+    margin: 0 0 34px 0;
+    // outline: 1px solid pink;
+
+    &.active {
+      color: #f7d29c;
+    }
+  }
+}
+
+.menu {
+  height: 310+px;
+  padding: 22px 0 0 0;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  li {
+    height: 56px;
+    margin: 0 0 48px 0;
+    // outline: 1px solid pink;
+
+    i {
+      display: inline-block;
+      width: 30px;
+      height: 29px;
+      font-size: 30px;
+      position: relative;
+      right: 5px;
+      margin: 0 0 10px 0;
+      // outline: 1px solid red;
+    }
+
+  }
+}
+
+.power-btn {
+  width: 99px;
+  height: 48px;
+  font-size: 23px;
+  color: #fff;
+  background: #f24141;
+}
+
+main {
+  width: calc(100vw - 99px);
+}
+
+.breadcrumb {
+  position: relative;
+  height: 39px;
+  padding: 0 81px 0 0;
+  line-height: 39px;
+  text-align: right;
+  background: #262626;
+
+  i {
+    color: #e23f3f;
+    margin: 0 45px;
+  }
+
+  span {
+    color: #fff;
+
+    &:nth-child(1) {
+      position: absolute;
+      left: 56px;
+    }
+  }
+
+}
+
+.nav {
+  height: 72px;
+  padding: 14px 28px;
+  box-shadow: 0 0 13px #aeaeae;
+
+  a {
+    display: inline-block;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    font-size: 17px;
+    margin: 0 21px;
+    padding: 12px 5px 0 0;
+    text-decoration: none;
+    color: #f5933f;
+    border: 2px solid #f5933f;
+    border-radius: 5px;
+    // outline: 1px solid pink;
+
+    &:nth-child(1) {
+      width: 135px;
+    }
+
+    &.active {
+      color: #f24141;
+      border: 2px solid #f45959;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  height: calc(100vh - 39px - 72px);
+  //   outline: 1px solid pink;
+
+  .box-left {
+    width: calc((100vw - 99px)/2);
+    border-right: 1px solid #d2d2d2;
+    text-align: center;
+
+    p:nth-child(1) {
+      padding: 9px 27px;
+      text-align: left;
+      box-shadow: 0px 3px 4px #aeaeae;
+      //   outline: 1px solid pink;
+
+      span {
+        line-height: 17px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: #3a3a3a;
+      }
+    }
+
+    .date-box {
+      width: 437px;
+      height: 102px;
+      padding: 17px 0 0 0;
+      margin: 13px auto;
+      border: 1px solid #aeaeae;
+      border-radius: 10px;
+
+      input {
+        display: inline;
+        width: 202px;
+        height: 32px;
+        margin: 0 5px;
+      }
+
+      p {
+        width: 435px;
+        height: 36px;
+        margin: 19px auto;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: 2px;
+        color: #70757f;
+        border-top: 1px solid #aeaeae;
+        border-bottom: 1px solid #aeaeae;
+        border-radius: 0 0 10px 10px;
+        background: linear-gradient(0deg, #EAEAEA -100%, #FFFFFF 80%);
+
+        span {
+          color: #f24141;
+        }
+      }
+    }
+
+    .title {
+      width: 437px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      color: #676d77;
+    }
+
+    .scroll {
+      width: 437px;
+      height: 440px;
+      margin: 13px auto 13px;
+      overflow: scroll;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
+    }
+
+    .date-data {
+      width: 437px;
+      max-height: 440px;
+      overflow: scroll;
+      text-align: center;
+      line-height: 25px;
+      font-size: 20px;
+      letter-spacing: 0px;
+      color: #6b6b6b;
+
+      tr {
+        &.active {
+          background: #f3f3f3;
+        }
+      }
+
+      td {
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 2px solid #d6d6d6;
+      }
+
+    }
+  }
+
+  .box-right {
+    width: calc((100vw - 99px)/2);
+
+    .toolbar {
+      position: relative;
+      display: flex;
+      height: 35px;
+      box-shadow: 0px 3px 4px #aeaeae;
+      //   outline: 1px solid pink;
+
+      p {
+        width: 200px;
+        padding: 10px;
+        // text-align: center;
+        // outline: 1px solid pink;
+
+
+      }
+
+      .cancel {
+        position: absolute;
+        right: 0;
+        width: 130px;
+        height: 35px;
+        background: #f5933f;
+        color: #fff;
+      }
+
+      .new-page-btn {
+        position: absolute;
+        right: 130px;
+        width: 130px;
+        height: 35px;
+        background: #f24141;
+        color: #fff;
+      }
+    }
+
+    .detail-order {
+      width: 437px;
+      height: 156px;
+      padding: 10px 13px;
+      margin: 13px auto 13px;
+      font-size: 16px;
+      color: #3a3a3a;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px;
+
+      li {
+        line-height: 25px;
+        border-bottom: 1px solid #efefef;
+      }
+
+      span {
+        display: inline-block;
+        width: 80px;
+        text-align-last: justify;
+      }
+    }
+
+
+    .detail-production {
+      // display: flex;
+      width: 437px;
+      height: 27px;
+      padding: 5px 13px;
+      margin: 13px auto 0;
+      border: 1px solid #d2d2d2;
+      border-radius: 10px 10px 0 0;
+
+      li {
+        display: inline;
+        line-height: 5px;
+        margin: 0 35px;
+
+        &:nth-child(1) {
+          text-align-last: left;
+          margin: 0 130px 0 0;
+        }
+      }
+
+    }
+
+    .scroll {
+      width: 437px;
+      height: 391px;
+      overflow: scroll;
+      margin: 0 auto;
+      border: 1px solid #d2d2d2;
+      border-radius: 0 0 10px 10px;
+
+      ul {
+        line-height: 25px;
+        font-size: 13px;
+        letter-spacing: 1px;
+
+        li {
+          display: flex;
+          border-bottom: 1px solid #efefef;
+
+          p {
+            width: 44px;
+            padding: 13px 0 13px 13px;
+            text-align-last: left;
+
+            &:nth-child(1) {
+              width: 235px;
+              margin: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            &:nth-child(2) {
+              margin: 0 55px 0 0;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

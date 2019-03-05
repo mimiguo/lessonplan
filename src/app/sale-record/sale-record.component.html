@@ -1,3 +1,96 @@
-<p>
-  sale-record works!
-</p>
+<aside>
+  <ul class="floor">
+    <li>1F</li>
+    <li>2F</li>
+    <li>室外</li>
+    <li>室外</li>
+    <!-- <li *ngFor="let item of floorArray;let i=index" [class.active]="selected[i]" (click)="onClick(i)">{{item.name}}</li> -->
+  </ul>
+  <hr>
+  <ul class="menu">
+    <li>
+      <i class="icon-calc"></i>
+      <p>收銀作業</p>
+    </li>
+    <li>
+      <i class="icon-doc-text"></i>
+      <p>會計作業</p>
+    </li>
+    <li>
+      <i class="icon-align-justify"></i>
+      <p>設定</p>
+    </li>
+  </ul>
+  <button class="power-btn"> <i class="icon-off"></i></button>
+</aside>
+<main>
+  <p class="breadcrumb">
+    <span>使用者名稱</span>
+    <span>日結</span>
+    <i>></i>
+    <span>銷售紀錄</span>
+  </p>
+  <nav class="nav">
+    <a>營業日報表</a>
+    <a class="active">銷售紀錄</a>
+    <a>刪單紀錄</a>
+  </nav>
+  <div class="content">
+    <div class="box-left">
+      <p>
+        <span>搜尋時間</span>
+      </p>
+
+      <div class="date-box">
+        <input type="date">
+        <input type="date">
+        <p>查詢結果有<span>20</span>筆記錄</p>
+      </div>
+
+      <p class="title">門市收支列表</p>
+      <div class="scroll">
+
+        <table class="date-data">
+          <tr *ngFor="let item of time;let i =index" [class.active]="selected[i]" (click)="onClick(i)">
+            <td>{{i+1}}.</td>
+            <td>{{item.day}}</td>
+            <td>{{item.time}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="box-right">
+      <div class="toolbar">
+        <p>詳細資訊</p>
+        <button class="new-page-btn">另開編輯</button>
+        <button class="cancel">退單</button>
+      </div>
+
+      <ul class="detail-order">
+        <li><span>修改人</span>: 王小明</li>
+        <li><span>桌號</span>: 外帶</li>
+        <li><span>價格</span>: NT6539</li>
+        <li><span>時間</span>: 2016-12-01-12:30</li>
+        <li><span>狀態</span>: 編輯過</li>
+      </ul>
+
+      <ul class="detail-production">
+        <li>商品名稱</li>
+        <li>數量</li>
+        <li>價格</li>
+      </ul>
+
+      <div class="scroll">
+        <ul>
+          <li *ngFor="let item of production;">
+            <p>{{item.name}}</p>
+            <p> x {{item.quantity}}</p>
+            <p>NT.{{item.price}}</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</main>
