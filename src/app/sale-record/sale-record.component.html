@@ -51,7 +51,7 @@
       <div class="scroll">
 
         <table class="date-data">
-          <tr *ngFor="let item of time;let i =index"[class.active]="selected[i]"(click)="onClick(i)">
+          <tr *ngFor="let item of time;let i =index" [class.active]="selected[i]" (click)="onClick(i)">
             <td>{{i+1}}.</td>
             <td>{{item.day}}</td>
             <td>{{item.time}}</td>
@@ -82,10 +82,12 @@
       </ul>
 
       <div class="scroll">
-        <ul *ngFor="let item of production;">
-          <li>{{item.name}}</li>
-          <li> x {{item.quantity}}</li>
-          <li>NT.{{item.price}}</li>
+        <ul>
+          <li *ngFor="let item of production;">
+            <p>{{item.name}}</p>
+            <p> x {{item.quantity}}</p>
+            <p>NT.{{item.price}}</p>
+          </li>
         </ul>
       </div>
 

@@ -210,9 +210,9 @@ main {
       font-size: 20px;
       letter-spacing: 0px;
       color: #6b6b6b;
-      
-      tr{
-        &.active{
+
+      tr {
+        &.active {
           background: #f3f3f3;
         }
       }
@@ -309,7 +309,7 @@ main {
 
     }
 
-    .scroll{
+    .scroll {
       width: 437px;
       height: 391px;
       overflow: scroll;
@@ -318,31 +318,33 @@ main {
       border-radius: 0 0 10px 10px;
 
       ul {
-        display: flex;
-        border-bottom: 1px solid #efefef;
         line-height: 25px;
         font-size: 13px;
         letter-spacing: 1px;
 
         li {
-          display: block;
-          width: 44px;
-          padding: 13px 0 13px 13px;
-          text-align-last: left;
+          display: flex;
+          border-bottom: 1px solid #efefef;
 
-          &:nth-child(1) {
-            width: 235px;
-            margin: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-          &:nth-child(2){
-            margin: 0 55px 0 0;
+          p {
+            width: 44px;
+            padding: 13px 0 13px 13px;
+            text-align-last: left;
 
+            &:nth-child(1) {
+              width: 235px;
+              margin: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            &:nth-child(2) {
+              margin: 0 55px 0 0;
+
+            }
           }
         }
-
       }
     }
   }
